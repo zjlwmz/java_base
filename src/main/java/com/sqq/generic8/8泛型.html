@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+泛型: java的参数化类型:允许在创建集合时指定结合类型元素类型
+1.编译时类型检查重要性
+  对象丢进集合时会失去类型,不同类型引发一场,取出强制转换ClassCastException
+2.泛型实现编译时类型检查
+  2.1 定义List子类,只接受某种类型
+  2.2 使用泛型
+3.定义泛型接口/泛型类
+  3.1 泛型允许在定义类/接口时指定类型形参.这个形参将在声明变量/创建对象时确定
+  3.2 泛型类<a href="GenericClass.java"></a>
+4.派生泛型接口/泛型类子类/实现类
+  4.1 派生子类如 public class A extends Apple<String> 使用方法时须为数据形参传入参数值
+  4.2 使用类/接口时可不传,但会有泛型检查警告:如 public class A extends Apple
+  4.2 静态方法/静态初始化/静态变量声明和初始化中不允许使用类型形参
+5.使用类型通配符
+  5.1 假设Foo是Bar一个子类型,则Foo[]依然是Bar[]子类型;但G<Foo>不是G<Bar>的子类型
+  5.2 List<?>是所有泛型List的父类
+6.设定类型通配符上限
+  6.1 List<? extends Shape>可表示所有Shape泛型List父类
+7.设定类型形参上限
+  7.1 定义类型形参时设定上限,用于表示传给该类型形参的世纪类型须为上限类型或其子类.如: public class Apple<T extends Number>
+  7.2 可为形参设定多个上限(至多一个父类上限,多个接口上限) 如: public class Apple<T extends Number & java.io.Serializable>
+8.方法签名中定义类型形参
+  8.1 方法声明中定义形参能在该方法内使用,接口/类声明中定义类型形参可在整个接口/类使用
+       如:     void array2Collection(T[] a, Collection<T> collection) {}
+  8.2 方法中泛型参数无需显示传入实际类型参宿
+9.泛型方法和类型通配符的区别/联系
+  9.1 <a href="Collection.java"></a>
+  9.2 类型通配符与显式声明类型形参区别:类型通配符即可在方法签名中定义形参类型,也可用于定义变量类型.但泛型方法中类型形参须在对应方法中显式声明.
+10.设定类型通配符下限
+  10.1 <a href="GenericSuper.java"></a>
+11.泛型方法/方法重载
+12.擦出/转换
+   12.1 擦除 <a href="Apple.java"></a>
+13.泛型与数组
+   13.1 java不支持泛型数组
+</body>
+</html>
