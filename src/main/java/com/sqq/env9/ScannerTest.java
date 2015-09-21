@@ -1,7 +1,5 @@
 package com.sqq.env9;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /**
@@ -10,16 +8,13 @@ import java.util.Scanner;
  * @CodeReviewer:
  */
 public class ScannerTest {
-    public static void main(String[] args) throws FileNotFoundException {
-       /* String logPaht = "C:\\IDE_workspace\\idea_workspace\\git\\java_demo\\src\\main\\java\\com\\sqq\\collection7\\a.ini";
-        Scanner sc = new Scanner(new File(logPaht));
-        while (sc.hasNextLine()) {
-            System.out.println("write : " + sc.nextLine());
-        }*/
-        Scanner scanner = new Scanner(System.in);
-        scanner.useDelimiter("\n");
-        while (scanner.hasNext()) {
-            System.out.println("you scan :" + scanner.next());
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("write : ");
+        while (in.hasNext() && !in.next().equals("exit")) {
+            System.out.println("your write: " + in.nextLine());
         }
     }
+
+
 }
