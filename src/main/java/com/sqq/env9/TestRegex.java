@@ -27,5 +27,7 @@ public class TestRegex {
         while (time.find()) {
             System.out.println("time is :"+time.group());
         }
+
+        System.out.println(Pattern.matches("\\d{18,50}", "123451234512345123"));
     }
 }
