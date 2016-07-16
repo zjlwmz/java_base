@@ -12,9 +12,9 @@ public abstract class Base {
 	public abstract void sort(Comparable[] array);
 
 	public static Integer[] intArray() {
-		Integer[] a = new Integer[30];
+		Integer[] a = new Integer[10];
 		for (int i = 0; i < a.length; i++) {
-			a[i] = RandomUtils.nextInt(0, 100);
+			a[i] = RandomUtils.nextInt(0, 10);
 		}
 		return a;
 	}
@@ -36,4 +36,6 @@ public abstract class Base {
 	public static boolean less(Comparable a, Comparable b) {
 		return a.compareTo(b) < 0;
 	}
+
+
 }
