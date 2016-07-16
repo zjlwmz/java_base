@@ -9,7 +9,6 @@ import org.apache.commons.lang3.RandomUtils;
  * @Date: 2016/7/13
  */
 public abstract class Base {
-	public abstract void sort(Comparable[] array);
 
 	public static Integer[] intArray() {
 		Integer[] a = new Integer[10];

@@ -22,7 +22,6 @@ public class Shell extends Base {
 	 *
 	 * @param array
 	 */
-	@Override
 	public void sort(Comparable[] array) {
 		int N = array.length;
 		int h = 1;

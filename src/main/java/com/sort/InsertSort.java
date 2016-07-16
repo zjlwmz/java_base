@@ -23,7 +23,6 @@ public class InsertSort extends Base {
 	 *
 	 * @param array
 	 */
-	@Override
 	public void sort(Comparable[] array) {
 		int n = array.length;
 		for (int i = 1; i < n; i++) {

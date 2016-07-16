@@ -23,7 +23,6 @@ public class ChooseSort extends Base {
 	 *
 	 * @param array
 	 */
-	@Override
 	public void sort(Comparable[] array) {
 		int n = array.length;
 		for (int i = 0; i < n; i++) {
